@@ -1,0 +1,30 @@
+<%- include("partials/head.ejs")   %>
+<%- include("partials/header.ejs") %>
+<div class='container-info'>
+<img src='https://i.postimg.cc/bwmLxcbQ/La-Cumplida-Refinada-Top-Banner-3984x460-b-EN-min.webp' alt='image' />
+</div>
+        <% info.forEach(info => { %>
+          <div data-aos="zoom-in" class="contenedorMainInfo">
+            <div class="contenedor">
+            <div class='imageInfo' style="background-image: url('<%= info.src %>')">
+                <div class="tarjeta">
+                <h2 class='subtitle'><%= info.title %></h2>
+                <div>
+                   <p class="parrafo"><%= info.text1 %></p>
+                   <p class="parrafo"><%= info.text2 %></p>
+                   <p class="parrafo"><%= info.text3 %></p>
+                  </div>
+              </div>
+               </div>
+            
+            </div>
+       
+            </div>
+            
+        <% }) %>
+
+        <div class='home-photo'>
+          <img src='https://i.postimg.cc/vBYKrBRY/Top-Banner-3984x460-a.webp' alt='image' />
+       </div>
+    <%- include("partials/footer.ejs") %>
+ 

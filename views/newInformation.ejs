@@ -1,0 +1,14 @@
+<h2>Este:</h2>
+<form action="/information/new" method="POST">
+ <input type="text" name="title" id="title" value="<% edit ? edit.title : '' %>"/>
+ <input type="text" name="src" id="src"/>
+ <input type="text" name="description" id="description"/>
+
+ <input type="hidden" name="_id" value="<%= edit ? edit._id : null %>" />
+ <input type="submit" value="Enviar1" />
+</form>
+<h2>Estas con tus tareas:</h2>
+<div class="botones">
+<p>Comprar pan</p>
+<button>Editar</button>
+<button>Borrar</button>

@@ -1,0 +1,28 @@
+<%- include("partials/head.ejs") %>
+<%- include("partials/header.ejs") %>
+
+<main>
+  <div class='containerForm'>
+  <div class="imagen-formulario" style="background-image: url('https://i.postimg.cc/dQdN8WJh/form.jpg');">
+    <% if(error) { %>
+      <% error.forEach(err=>{ %>
+           <p class='error'> <%= err.message %> </p>
+       <% }) %>
+       <% } %>
+  </div>
+   <div class="formulario">
+    <h2>Create Account <img class='capsula' src='/assets/coffee-cup.png' alt='icono' /></h2>
+    <form action="/signup" method="POST">
+    <input type="text" placeholder="Name*" name="name" id="name" required/>
+    <input type="text" placeholder="Lastname*" name="lastname" id="lastname" required/>
+    <input type="email" placeholder="Email*" name="email" id="email" required/>
+    <input type="password" placeholder="Password*" name="password" id="password" required/>
+    <input type="text" placeholder="url*" name="image" id="image" required/>
+    <button class="boton-formulario" type="submit" value="Send">Send</button>
+  </div>
+    </form>
+        </div>
+      <%- include("partials/footer.ejs") %>
+      
+</body>
+</html>

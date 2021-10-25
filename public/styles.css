@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;900&display=swap");
+html * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+/* ----------------------NAV------------------------------------- */
+.title-nav {
+	color: #000;
+	padding-left: 2vw;
+}
+
+.logo {
+	width: 3vw;
+}
+
+.active {
+	cursor: pointer;
+	padding: 5vh 0.8vw;
+	border-bottom: 4px solid #b7212c;
+}
+
+nav {
+	display: flex;
+	height: 14vh;
+	width: 100%;
+	align-items: center;
+	box-shadow: 4px 6px 52px -9px rgba(0, 0, 0, 0.137);
+}
+
+nav a {
+	color: rgb(131, 129, 129);
+	text-decoration: none;
+	padding: 0vh 1vw;
+	margin: 0vh 1vw;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+}
+
+nav a:hover {
+	color: #d31c28;
+}
+
+.imageUser {
+	width: 3.5rem;
+	height: 3.5rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 100%;
+}
+
+.imageComment {
+	width: 4rem;
+	height: 4rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 100%;
+}
+
+.userComment {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nameComment {
+	flex-direction: column;
+	margin-left: 2vw;
+}
+
+
+/* ---------------------------------- main-------------------------------------------- */
+
+.containerMain {
+	height: 70vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.containerMain img:hover {
+	transform: scale(1.1);
+}
+
+.containerMain img {
+	margin: 1vw;
+}
+
+.typeCoffe {
+	display: flex;
+	flex-direction: column;
+	height: 40vh;
+	align-items: center;
+}
+
+.subtitle {
+	font-weight: bold;
+	text-align: center;
+	font-size: 4rem;
+}
+
+.containerImage {
+	display: flex;
+	justify-content: center;
+	padding: 3vw;
+}
+
+.image-home {
+	background-position: center;
+	background-size: cover;
+	width: 60%;
+	height: 100vh;
+}
+
+.imageCoffeHome {
+	background-position: center;
+	background-size: cover;
+	width: 50%;
+	height: 100%;
+}
+
+.image-home h1 {
+	color: #000;
+	font-size: 6vw;
+	font-weight: bold;
+}
+
+.home-photo {
+	display: flex;
+	justify-content: center;
+}
+
+.image-home h2 {
+	text-align: center;
+	color: #999;
+}
+
+.capsula {
+	margin-left: 1vw;
+}
+
+.coffe {
+	width: 20vw;
+}
+
+.main {
+	height: 80vh;
+}
+
+.description {
+	display: flex;
+	align-items: center;
+}
+
+.description p {
+	color: #999;
+	font-weight: normal;
+}
+
+.description-image {
+	width: 50%;
+}
+
+.description-text {
+	margin: 4vw;
+	width: 40%;
+}
+
+.contenedor {
+	padding: 6vh 0vw;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.tarjeta {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 3rem;
+}
+
+.imageInfo {
+	background-size: cover;
+	background-position: center;
+	width: 60vw;
+	height: 70vh;
+	box-shadow: 4px 6px 52px -9px rgba(0, 0, 0, 0.137);
+}
+
+.parrafo {
+	font-weight: normal;
+	color: #999;
+}
+
+.tarjeta button {
+	padding: 2vh 4vw;
+	background-color: #b7212c;
+	color: #fff;
+	border: none;
+	border-radius: 2vw;
+}
+
+.tarjeta-imagen {
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 30%;
+	margin-bottom: 3vw;
+	border-radius: 1vw;
+}
+
+.imagen-formulario {
+	background-position: center;
+	background-size: cover;
+	width: 50%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 3vw;
+}
+
+.divComments {
+	background-color: rgba(168, 168, 168, 0.356);
+	padding: 1vw;
+	height: 60vh;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
+.menu {
+	width: 1.5vw;
+}
+
+.container-info {
+	display: flex;
+	justify-content: center;
+}
+
+.inputComments {
+	border: none;
+	border: 1px solid #999;
+	border-radius: 2vw;
+	width: 90vw;
+	outline: #b7212c;
+	padding: 1vw;
+	outline: none;
+}
+
+.imageComments {
+	width:100%;
+	height: 30vh;
+	background-image: url('./assets/portada.jpeg');
+	background-size: cover;
+	background-position: center;
+}
+
+.imagen-formulario h2 {
+	color: #000;
+}
+
+.containerForm {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.formulario {
+	width: 50%;
+	justify-content: center;
+	text-align: center;
+}
+
+.formulario h2 {
+	font-size: 3vw;
+	font-weight: bold;
+}
+
+.formulario input {
+	border: none;
+	border-bottom: 2px solid #999;
+	padding: 1vw;
+	color: #000;
+	width: 70%;
+	margin: 1vw;
+	outline: none;
+	background-color: transparent;
+}
+
+.formulario input::placeholder {
+	color: #999;
+}
+
+.boton-formulario {
+	padding: 2vh 3vw;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 1.5vw;
+	width: 20vw;
+	font-weight: bold;
+	font-size: 1.5vw;
+	background-color: #000;
+}
+
+.formulario-login {
+	background-image: url("./assets/estrellas.jpeg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.formulario-login h2 {
+	color: #fff;
+}
+
+.error {
+	color: #fff;
+	background-color: #d31c28;
+	border-radius: 4px;
+	width: 40%;
+	padding: 0.5vw;
+}
+
+
+.parrafo h2 {
+	color: #fff;
+	padding: 1vw;
+}
+
+.parrafo p {
+	padding: 0.5vw;
+}
+
+.noAutorizado {
+	min-height: 80vh;
+	text-align: center;
+}
+
+.pageAutorizacion {
+	background-position: initial;
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+	padding: 10vh;
+}
+
+.pageAutorizacion h1 {
+	color: #fff;
+	font-weight: bold;
+}
+
+footer {
+	background-position: center;
+	background-size: cover;
+	height: 60vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 2vw;
+	font-size: 1.2rem;
+}
+
+.icono {
+	width: 3vw;
+	margin: 1vw;
+}
+
+footer a:hover {
+	opacity: 0.5;
+	width: 5%;
+}
+
+footer p {
+	color: #fff;
+	font-weight: normal;
+	text-align: center;
+}
+
+footer h2 {
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+
+.iconFooter {
+	display: flex;
+	flex-direction: column;
+}
+
+.iconoscomments {
+	width: 1.5vw;
+}
+
+.comment {
+	padding: 3vw;
+	background-color: #999;
+}
+
+.nombre {
+	font-size: 2vw;
+	font-weight: bold;
+	color: #fff;
+}
+
+.buttonComment {
+	background-color: #d31c28;
+	padding: 2vh 2vw;
+	height: 4rem;
+	width: 4rem;
+	color: #fff;
+	border: none;
+	margin: 2vw;
+	border-radius: 100%;
+	display: flex;
+    justify-content: center;
+}
+
+.centrado {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cajacomentario {
+	border-radius: 4vw;
+	padding: 1vw;
+	background-color: #ff8f79;
+}
+
+.titleComment {
+	font-size: 4rem;
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+}
+
+.comentarios-div {
+	width: 70vw;
+	margin: 2vh 0vw;
+	padding: 3vw;
+}
+
+.div-principal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 2vw;
+}
+
+.comentario {
+	color: #fff;
+	font-weight: normal;
+}
+
+.button {
+	background-color: transparent;
+	padding: 2vh 3vw;
+	margin: 1vw;
+	border: 1px solid #fff;
+	color: #fff;
+	border-radius: 1vw;
+	background: rgba(34, 34, 34, 0.376);
+}
+
+.pageError {
+	background-image: url("./assets/page.jpg");
+	background-position: initial;
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4vw;
+}
+
+.pageError a:hover button {
+	background-color: #000;
+	color: #fff;
+}
+
+/* ----------------PROFILE---------------------- */
+
+.container-profile {
+	padding: 0vh 3vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #fff;
+}
+
+.container-profile h1 {
+	color: #000;
+	font-weight: bold;
+	font-size: 4rem;
+}
+
+.profile-text {
+	display: flex;
+    align-items: center;
+	color: #000;
+	background-position: center;
+	background-size: cover;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.profile-text h2{
+	color: #000;
+    font-size: bold;
+}
+
+.profile h2, p {
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+}
+
+.user-profile a {
+	text-decoration: none;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	color: #000;
+}
+
+.user-profile a:hover {
+	color: #000;
+}
+
+.photo-profile {
+	background-position: center;
+	background-size: cover;
+	width: 10rem;
+	height: 10rem;
+	border-radius: 100%;
+}
+
+.profile-title h1 {
+	text-align: center;
+	width: 30vw;
+}
+
+.icono-back {
+	width: 3rem;
+}
+
+.title-photo {
+	display: flex;
+	justify-content: center;
+	color: #000;
+}
+
+.profile {
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+}
+
+.profile p {
+	text-align: center;
+	color: #fff;
+	padding: 1vw;
+}

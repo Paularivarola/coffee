@@ -1,0 +1,75 @@
+<%- include("partials/head.ejs") %> <%- include("partials/header.ejs") %>
+
+
+  <div class="div-principal">
+    <h1 class='titleComment'>Tell us which is your favorite coffee</h1>
+    <div class='imageComments'></div>   
+    
+    <div class="comentarios-div">
+      <h1 class="subtitle">Comments <img class='logo' src='/assets/coffee-beans.png' alt='icono'/><img class='logo' src='/assets/rosquilla.png' alt='icono'/></h1>
+      <input type="hidden" name="userId" value="<%= userId %>" />
+      <div class="divComments" data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+        <% if( comments.length === 0){ %>
+        <h1 class="titulo">No comments</h1>
+        <% }else{ %> <% comments.forEach(comment =>{ %>
+        <div class="cajacomentario mt-2 py-1 shadow">
+          <div class="userComment">
+            <div class='d-flex align-items-center'>
+            <div class='imageComment' style="background-image: url('<%= comment.image %>')">
+            </div>
+           <div class='nameComment'>
+            <p class="nombre"><%= comment.name %></p>
+            <p class="comentario"><%= comment.comment %></p>
+          </div>
+          </div>
+            <% if(loggedIn && String(userId) == String(comment['userId'])){ %>
+              <div>
+                <div class="user">
+                  <div class="nav-item dropdown align-items-center">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img class="menu" src="/assets/menu.png" alt="user"/>
+                      </a>
+                      <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                        <li><a href="/edit-comment/<%= comment._id %>" class="text-dark"><img class="iconoscomments pd-1" src="/assets/edit.png" alt="edit"/></a></li>  
+                        <li><a href="/delete-comment/<%= comment._id %> " class="text-dark"><img class="iconoscomments" src="/assets/trash.png" alt="delete"/></a></li>
+                      </ul> 
+              </div>
+             </div>
+            <% } %>
+        </div>
+      </div>
+        <% }) %> <% } %>
+      </div>
+      <form action="/reviews" method="POST" class="row">
+        <div>
+          <div class="centrado">
+            <input
+              class="inputComments"
+              placeholder="write a comment"
+              name="comment"
+              type="text"
+              value="<%= edited? edited.comment : null %>"
+              required
+            />
+
+            <input
+              type="hidden"
+              name="_id"
+              value="<%= edited ? edited._id : null %>"
+            />
+          
+            <input type="submit" value="Send" class="buttonComment" />
+           
+          </div>
+        </div>
+        <div class="col-4">
+          <% if(error){ %>
+          <small class="text-white bg-danger py-2 px-2"><%= error %></small>
+          <% } %>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <%- include("partials/footer.ejs") %>
+</div>

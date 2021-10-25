@@ -1,0 +1,36 @@
+<header>
+       <nav>
+        <div class="user">
+          <div class="nav-item dropdown align-items-center">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <% if(!loggedIn)  { %>
+                  <img class="logo" src="/assets/login.png" alt="user"/>
+                  <% } else { %>
+                      <div class='imageUser' style="background-image: url('<%= image %>')"></div>
+                  <% } %>
+              </a>
+              <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                <li> <% if (!loggedIn) { %>
+                  <a class="<%= title.includes('Sign Up') ? 'active' : null %>" href="/signup">Sign Up</a></li>
+                  <li><a class="<%= title.includes('Sign In') ? 'active' : null %>" href="/signin">Sign In</a></li>
+              <% } else {  %>
+                <li><a>Hi! <%= name %></a></li>
+                <li><a class="<%= title.includes('Profile') ? 'active' : null %>" href="/profile">Profile</a></li>
+                  <li><a class="<%= title.includes('Out') ? 'active' : null %>" href="/signout">Sign Out</a></li>
+              <% } %></li>
+              </ul> 
+      </div>
+     </div>
+  <div class='navegation-user'>
+          <div class="navegation">
+            <a class="<%= title.includes('Home') ? 'active' : null %>" href="/">Home</a>
+            <a class="<%= title.includes('Information') ? 'active' : null %>" href="/information">Information</a>
+            <a class="<%= title.includes('Reviews') ? 'active' : null %>" href="/reviews">Reviews</a>
+          </div>
+          <div class="earth"></div> 
+         <div>
+        </div>
+      </nav>
+    </header>
+   
+     <main>
