@@ -6,7 +6,9 @@
   <div class="imagen-formulario" style="background-image: url('https://i.postimg.cc/dQdN8WJh/form.jpg');">
     <% if(error) { %>
       <% error.forEach(err=>{ %>
-           <p class='error'> <%= err.message %> </p>
+        <div class='containerError'>
+          <p class='error'> <%= err.message %> </p>
+        </div>
        <% }) %>
        <% } %>
   </div>
@@ -19,6 +21,9 @@
     <input type="password" placeholder="Password*" name="password" id="password" required/>
     <input type="text" placeholder="url*" name="image" id="image" required/>
     <button class="boton-formulario" type="submit" value="Send">Send</button>
+    <div class='d-flex justify-content-center p-2'>
+      <p>Already have an account?</p><a href="/signin">Log In here!</a>
+    </div>
   </div>
     </form>
         </div>

@@ -52,7 +52,6 @@ const userControllers = {
 			let userExist = await User.findOne({ email })
 			if (!userExist) {
 				let newUser = await user.save()
-				console.log(newUser)
 				req.session.loggedIn = true
 				req.session.name = newUser.name
 				req.session.userId = newUser._id
@@ -60,7 +59,6 @@ const userControllers = {
         req.session.lastname = newUser.lastname
 				return res.redirect("/")
 			} else {
-				console.log(error)
 				res.render("signup", {
 					title: "Sign Up",
 					error: "email in use",

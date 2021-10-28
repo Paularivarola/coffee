@@ -4,7 +4,9 @@
   <div class='containerForm'>
   <div class="imagen-formulario" style="background-image: url('https://i.postimg.cc/wMDPnTCN/coffe-form.jpg');">
     <% if(error) { %>
+      <div class='containerError'>
            <p class='error'> <%= error %> </p>
+           </div>
        <% } %>
   </div>
    <div class="formulario">
@@ -13,6 +15,9 @@
     <input type="email" placeholder="Email*" name="email" id="email" required/>
     <input type="password" placeholder="Password*" name="password" id="password" required/>
     <button class="boton-formulario" type="submit" value="Send">Send</button>
+    <div class='d-flex justify-content-center p-1'>
+    <p>Don't have an account?</p><a href="/signup">Sign up here!</a>
+    </div>
   </div>
     </form>
         </div>

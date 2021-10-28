@@ -7,6 +7,13 @@ html * {
 }
 
 /* ----------------------NAV------------------------------------- */
+
+.carousel-inner > .item > img {
+	object-fit: scale-down;
+	height: 50vh;
+	width: 50vw;
+  }
+
 .title-nav {
 	color: #000;
 	padding-left: 2vw;
@@ -18,8 +25,7 @@ html * {
 
 .active {
 	cursor: pointer;
-	padding: 5vh 0.8vw;
-	border-bottom: 4px solid #b7212c;
+	padding: 1vh 0.8vw;
 }
 
 nav {
@@ -37,6 +43,7 @@ nav a {
 	margin: 0vh 1vw;
 	text-transform: uppercase;
 	font-size: 0.8rem;
+	font-weight: bold;
 }
 
 nav a:hover {
@@ -63,13 +70,20 @@ nav a:hover {
 
 .userComment {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: flex-start;
+	/* justify-content: space-between; */
+	/* align-items: center; */
+	margin:1vw;
 }
 
 .nameComment {
-	flex-direction: column;
 	margin-left: 2vw;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+.comment-p {
+	width: 100%;
 }
 
 
@@ -104,16 +118,21 @@ nav a:hover {
 	font-size: 4rem;
 }
 
+.subtitleInfo {
+	font-weight: bold;
+	text-align: center;
+	font-size: 4rem;
+}
+
 .containerImage {
 	display: flex;
 	justify-content: center;
-	padding: 3vw;
 }
 
 .image-home {
 	background-position: center;
 	background-size: cover;
-	width: 60%;
+	width: 100%;
 	height: 100vh;
 }
 
@@ -125,9 +144,12 @@ nav a:hover {
 }
 
 .image-home h1 {
-	color: #000;
+	color: rgba(42, 42, 42, 0.842);
+	padding-top: 2vh;
 	font-size: 6vw;
 	font-weight: bold;
+	text-align: center;
+	text-shadow: 4px 6px 52px -9px rgba(42, 42, 42, 0.842);
 }
 
 .home-photo {
@@ -135,9 +157,15 @@ nav a:hover {
 	justify-content: center;
 }
 
+.home-photo img {
+ margin-top: 2rem;
+}
+
+
 .image-home h2 {
 	text-align: center;
-	color: #999;
+	color: rgba(42, 42, 42, 0.842);
+	text-shadow: 4px 6px 52px -9px #000;
 }
 
 .capsula {
@@ -145,7 +173,7 @@ nav a:hover {
 }
 
 .coffe {
-	width: 20vw;
+	width: 15vw;
 }
 
 .main {
@@ -182,21 +210,28 @@ nav a:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding: 3rem;
+	padding: 2rem;
+	border: 1px solid #E5DDD6;
+	box-shadow: 4px 6px 52px -9px rgba(0, 0, 0, 0.137);
 }
 
 .imageInfo {
 	background-size: cover;
 	background-position: center;
 	width: 60vw;
-	height: 70vh;
-	box-shadow: 4px 6px 52px -9px rgba(0, 0, 0, 0.137);
+	height: 60vh;
 }
 
-.parrafo {
+/* .parrafo {
+	font-weight: normal;
+	color: #999;
+} */
+
+.parrafoInfo {
 	font-weight: normal;
 	color: #999;
 }
+
 
 .tarjeta button {
 	padding: 2vh 4vw;
@@ -227,7 +262,7 @@ nav a:hover {
 }
 
 .divComments {
-	background-color: rgba(168, 168, 168, 0.356);
+	background-color: #dbdbda;
 	padding: 1vw;
 	height: 60vh;
 	overflow-y: scroll;
@@ -253,14 +288,6 @@ nav a:hover {
 	outline: none;
 }
 
-.imageComments {
-	width:100%;
-	height: 30vh;
-	background-image: url('./assets/portada.jpeg');
-	background-size: cover;
-	background-position: center;
-}
-
 .imagen-formulario h2 {
 	color: #000;
 }
@@ -274,8 +301,15 @@ nav a:hover {
 
 .formulario {
 	width: 50%;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	text-align: center;
+}
+
+.containerError p {
+	font-size: 1rem;
+	font-weight: normal;
 }
 
 .formulario h2 {
@@ -292,6 +326,11 @@ nav a:hover {
 	margin: 1vw;
 	outline: none;
 	background-color: transparent;
+}
+
+.formulario p {
+	color: #000;
+	font-size: normal;
 }
 
 .formulario input::placeholder {
@@ -364,7 +403,7 @@ nav a:hover {
 footer {
 	background-position: center;
 	background-size: cover;
-	height: 60vh;
+	height: 40vh;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -386,6 +425,7 @@ footer p {
 	color: #fff;
 	font-weight: normal;
 	text-align: center;
+	font-size: 1rem;
 }
 
 footer h2 {
@@ -412,17 +452,16 @@ footer h2 {
 	font-size: 2vw;
 	font-weight: bold;
 	color: #fff;
+	text-align: left;
 }
 
 .buttonComment {
 	background-color: #d31c28;
-	padding: 2vh 2vw;
-	height: 4rem;
-	width: 4rem;
+	padding: 1vh 2vw;
 	color: #fff;
 	border: none;
 	margin: 2vw;
-	border-radius: 100%;
+	border-radius: 5%;
 	display: flex;
     justify-content: center;
 }
@@ -436,12 +475,12 @@ footer h2 {
 .cajacomentario {
 	border-radius: 4vw;
 	padding: 1vw;
-	background-color: #ff8f79;
+	background-color: #FE5102;
 }
 
 .titleComment {
 	font-size: 4rem;
-	color: #000;
+	color: #FE5102;
 	font-weight: bold;
 	text-align: center;
 }
@@ -463,6 +502,7 @@ footer h2 {
 .comentario {
 	color: #fff;
 	font-weight: normal;
+	text-align: left;
 }
 
 .button {
@@ -476,19 +516,28 @@ footer h2 {
 }
 
 .pageError {
-	background-image: url("./assets/page.jpg");
 	background-position: initial;
 	background-size: cover;
 	height: 100vh;
 	width: 100%;
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	padding: 4vw;
+	padding: 2vw;
 }
 
-.pageError a:hover button {
-	background-color: #000;
+.pageError h1 {
+	font-weight: bold;
+	font-size: 8rem;
+	color: #000;
+}
+
+.pageError h2 {
+	background-color: red;
+	color: #fff;
+}
+
+.pageError button {
+	background-color: rgb(197, 17, 17);
 	color: #fff;
 }
 
@@ -575,4 +624,523 @@ footer h2 {
 	text-align: center;
 	color: #fff;
 	padding: 1vw;
+}
+
+@media only screen and (max-width: 425px) {
+.logo {
+	width: 3rem;
+}
+
+.image-home {
+	height: 50vh;
+	padding: 1rem;
+}
+
+.image-home h1 {
+	font-size: 2.5rem;
+	text-shadow: 2px 2px 2px #999;
+}
+
+.image-home h2 {
+	text-shadow: 2px 2px 2px #999;
+}
+
+.containerMain {
+	flex-direction: column;
+}
+
+.typeCoffe h2 {
+	font-size: 2.5rem;
+	padding: 2rem;
+}
+
+.capsula {
+	width: 3rem;
+}
+
+.imageCoffeHome {
+	width: 100%;
+	height: 60vh;
+	padding: 1rem;
+}
+
+.description {
+	flex-direction: column-reverse;
+}
+
+.description img {
+	width: 100%;
+}
+
+
+.description-text {
+	width: 100%;
+	padding: 1rem;
+}
+
+footer {
+ height: 30vh;
+ justify-content: start;
+}
+
+.infoFooter p, h2 {
+	text-align: left;
+	text-shadow: 2px 2px 2px #999;
+}
+
+.iconFooter {
+	flex-direction: row;
+}
+
+.icono {
+	width: 2rem;
+}
+
+.containerForm {
+	flex-direction: column;
+	align-self: center;
+	flex-wrap: wrap;
+	min-height: 70vh;
+}
+
+.formulario {
+	width: 100%;
+	height: 60vh;
+	padding: 1rem 0rem;
+}
+
+.containerError {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	height: 12vh;
+}
+
+.containerError p {
+	font-size: 1rem;
+	font-weight: normal;
+	margin: 0.2vw;
+	width: 90%;
+}
+
+.formulario input {
+	width: 80%;
+	outline: none;
+}
+
+.formulario h2 {
+    font-size: 2rem;
+	text-align: center;
+}
+
+
+.imagen-formulario {
+ height: 60vh;
+ width: 100%;
+}
+
+.boton-formulario {
+	font-size: 1rem;
+	width: 30%;
+	margin-top: 1rem;
+}
+
+.formulario input::placeholder {
+	color: #000;
+}
+
+.noAutorizado {
+	min-height: 50vh;
+}
+
+
+
+}
+
+
+@media only screen and (max-width: 576px) { 
+	.logo {
+		width: 3rem;
+	}
+	
+	.image-home {
+		height: 50vh;
+		padding: 1rem;
+	}
+	
+	.image-home h1 {
+		font-size: 2.5rem;
+		text-shadow: 2px 2px 2px #999;
+	}
+	
+	.image-home h2 {
+		text-shadow: 2px 2px 2px #999;
+	}
+	
+	.containerMain {
+		flex-direction: column;
+	}
+	
+	.typeCoffe h2 {
+		font-size: 2.5rem;
+		padding: 2rem;
+	}
+	
+	.capsula {
+		width: 3rem;
+	}
+	
+	.imageCoffeHome {
+		width: 100%;
+		height: 60vh;
+		padding: 1rem;
+	}
+	
+	.description {
+		flex-direction: column-reverse;
+	}
+	
+	.description img {
+		width: 100%;
+	}
+	
+	
+	.description-text {
+		width: 100%;
+		padding: 1rem;
+	}
+	
+	footer {
+	 height: 30vh;
+	 justify-content: start;
+	}
+	
+	.infoFooter p, h2 {
+		text-align: left;
+		text-shadow: 2px 2px 2px #999;
+	}
+	
+	footer p {
+		font-size: 1rem;
+	}
+
+	.iconFooter {
+		flex-direction: row;
+	}
+	
+	.icono {
+		width: 2rem;
+	}
+	
+	.containerForm {
+		flex-direction: column;
+		align-self: center;
+		min-height: 70vh;
+	}
+	
+	.formulario {
+		width: 100%;
+		height: 60vh;
+		padding: 1rem 0rem;
+	}
+	
+	.formulario input {
+		width: 80%;
+	}
+	
+	.formulario h2 {
+		font-size: 2rem;
+		text-align: center;
+	}
+	
+	
+	.imagen-formulario {
+	 height: 50vh;
+	 width: 100%;
+	}
+	
+	.boton-formulario {
+		font-size: 1rem;
+		width: 30%;
+		margin-top: 1rem;
+	}
+	
+	.formulario input::placeholder {
+		color: #000;
+	}
+
+	.noAutorizado {
+		min-height: 50vh;
+	}
+	
+	.containerError {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		height: 12vh;
+	}
+	
+	.containerError p {
+		font-size: 1rem;
+		font-weight: normal;
+		margin: 0.2vw;
+		width: 90%;
+	}
+	
+	.comentarios-div {
+     width: 100%;
+	}
+
+	.titleComment {
+		font-size: 2rem;
+	}
+
+	.subtitle {
+		font-size: 1.5rem;
+	}
+
+	.div-principal {
+		width: 100%;
+	}
+
+	.inputComments {
+		width: 80%;
+	}
+
+	.imageInfo {
+		width: 90%;
+		height: 50%;
+	}
+
+	.parrafoInfo {
+		text-align: left;
+	}
+
+	.container-info img {
+		width: 100%;
+	}
+
+	.subtitleInfo {
+		font-size: 2rem;
+	}
+
+	.home-photo {
+		display: none;
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
+	.logo {
+		width: 3rem;
+	}
+	
+	.image-home {
+		height: 50vh;
+		padding: 1rem;
+	}
+	
+	.image-home h1 {
+		font-size: 2.5rem;
+		text-shadow: 2px 2px 2px #999;
+	}
+	
+	.image-home h2 {
+		text-shadow: 2px 2px 2px #999;
+	}
+	
+	.containerMain {
+		flex-direction: column;
+	}
+	
+	.typeCoffe h2 {
+		font-size: 2.5rem;
+		padding: 2rem;
+	}
+	
+	.capsula {
+		width: 3rem;
+	}
+	
+	.imageCoffeHome {
+		width: 100%;
+		height: 60vh;
+		padding: 1rem;
+	}
+	
+	.description {
+		flex-direction: column-reverse;
+	}
+	
+	.description img {
+		width: 100%;
+	}
+	
+	
+	.description-text {
+		width: 100%;
+		padding: 1rem;
+	}
+	
+	footer {
+	 height: 30vh;
+	 justify-content: start;
+	}
+	
+	.infoFooter p, h2 {
+		text-align: left;
+		text-shadow: 2px 2px 2px #999;
+	}
+	
+	.iconFooter {
+		flex-direction: row;
+	}
+	
+	.icono {
+		width: 2rem;
+	}
+	
+	.containerForm {
+		flex-direction: column;
+		align-self: center;
+		min-height: 70vh;
+	}
+	
+	.formulario {
+		width: 100%;
+		height: 60vh;
+		padding: 1rem 0rem;
+	}
+	
+	.formulario input {
+		width: 80%;
+	}
+	
+	.formulario h2 {
+		font-size: 2rem;
+		text-align: center;
+	}
+	
+	
+	.imagen-formulario {
+	 height: 50vh;
+	 width: 100%;
+	}
+	
+	.boton-formulario {
+		font-size: 1rem;
+		width: 30%;
+		margin-top: 1rem;
+	}
+	
+	.formulario input::placeholder {
+		color: #000;
+	}
+	
+	.containerError {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		height: 12vh;
+	}
+	
+	.containerError p {
+		font-size: 1rem;
+		font-weight: normal;
+		margin: 0.2vw;
+		width: 90%;
+	}
+
+	.tarjeta {
+		width: 100%;
+	}
+
+	.imageInfo {
+		width: 90%;
+		height: 50%;
+	}
+
+	.container-info img {
+		width: 100%;
+	}
+	.home-photo {
+		display: none;
+	}
+
+}
+
+@media only screen and (min-width: 1200px) {
+.image-home h1 {
+ font-size: 6rem;
+}
+	
+.formulario {
+	font-size: 1.5rem;
+}
+
+.imageCoffeHome {
+	width: 50%;
+	height: 100%;
+}
+
+.containerForm {
+	height: 100vh;
+}
+
+.formulario {
+	height: 100%;
+}
+
+.formulario h2 {
+	margin-top: 3vh;
+}
+
+.formulario input {
+	padding: 0.2vw;
+}
+
+.containerMain {
+	height: 50vh;
+}
+
+.typeCoffe {
+	width: 50%;
+}
+
+.navegation a {
+	font-size: 1rem;
+}
+
+
+.tarjeta {
+	width: 100%;
+}
+
+.imageInfo {
+	width: 60%;
+	height: 40vh;
+
+}
+.parrafoInfo {
+	text-align: left;
+}
+
+.container-info img {
+	width: 80%;
+}
+
+.subtitleInfo {
+	font-size: 4rem;
+}
+
+
+.tarjeta {
+	height: 100%;
+	border: none;
+}
+
+.container-info {
+	background-color: #F3F2EF;
+}
+
 }
