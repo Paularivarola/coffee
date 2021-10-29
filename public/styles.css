@@ -110,6 +110,7 @@ nav a:hover {
 	flex-direction: column;
 	height: 40vh;
 	align-items: center;
+	justify-content: center;
 }
 
 .subtitle {
@@ -221,11 +222,6 @@ nav a:hover {
 	width: 60vw;
 	height: 60vh;
 }
-
-/* .parrafo {
-	font-weight: normal;
-	color: #999;
-} */
 
 .parrafoInfo {
 	font-weight: normal;
@@ -679,17 +675,13 @@ footer h2 {
 }
 
 footer {
- height: 30vh;
+ height: 50vh;
  justify-content: start;
 }
 
 .infoFooter p, h2 {
 	text-align: left;
 	text-shadow: 2px 2px 2px #999;
-}
-
-.iconFooter {
-	flex-direction: row;
 }
 
 .icono {
@@ -753,8 +745,6 @@ footer {
 	min-height: 50vh;
 }
 
-
-
 }
 
 
@@ -779,6 +769,10 @@ footer {
 	
 	.containerMain {
 		flex-direction: column;
+	}
+
+	.typeCoffe {
+		height: 100%;
 	}
 	
 	.typeCoffe h2 {
@@ -822,10 +816,6 @@ footer {
 	
 	footer p {
 		font-size: 1rem;
-	}
-
-	.iconFooter {
-		flex-direction: row;
 	}
 	
 	.icono {
